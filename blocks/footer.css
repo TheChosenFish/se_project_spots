@@ -1,5 +1,5 @@
 .footer {
-  border-top: 1px rgba(33, 33, 33, 0.4) solid;
+  /* border-top: 1px rgba(33, 33, 33, 0.4) solid; */
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -7,4 +7,9 @@
 .footer__title{
   display: flex;
   justify-content: center;
+  margin: 0;
+  opacity: 70%;
+  font-weight: 400;
+  line-height: 16px;
+  font-size: 16px;
 }
