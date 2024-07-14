@@ -18,30 +18,27 @@ Spots is a multi-user website designed to make it easy to share pictures and com
 
 * To make this sight responsive we used a coding rule called media queries which act as rules for the page to adapt to different screen sizes. We also implied import rules in the **index.css** file to help with the organization of css. 
 
-* We used a lot of '<div>' elements to arrange different sections on the site
+* We used a lot of 'div' elements to arrange different sections on the site
 
 * Also newer techniques like grid template columns
 
-'''
-.cards__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 413px);
-  justify-content: center;
-  gap: 40px 20px;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
 
-}
-'''
+
+
 
 #### Demo images
 
-* [demo version](../se_project_spots/images/demoimages/Screenshot%202024-07-14%20at%208.55.09%20AM.png).
-* [demo version](../se_project_spots/images/demoimages/Screenshot%202024-07-14%20at%208.55.36%20AM.png).
-* [demo version](../se_project_spots/images/demoimages/Screenshot%202024-07-14%20at%208.56.10%20AM.png).
+* [demo version desktop](../se_project_spots/images/demoimages/Screenshot%202024-07-14%20at%208.55.09%20AM.png).
+* [demo version tablet](../se_project_spots/images/demoimages/Screenshot%202024-07-14%20at%208.55.36%20AM.png).
+* [demo version mobile](../se_project_spots/images/demoimages/Screenshot%202024-07-14%20at%208.56.10%20AM.png).
 
 
 #### Spots Demo Video
 
 [demo-video](https://drive.google.com/file/d/1DrN6P8FihTSNySZwKWd37Q3D4RO6VX0E/view?usp=sharing)
+
+##### Deployment
+
+This website has been deployed to github pages
+
+[deployment-link]()
