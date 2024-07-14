@@ -1,23 +1,47 @@
-# Project 3: Spots
+# Spots - 
 
-### Overview  
+a picture sharing site
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+## Description
 
-(https://github.com/TheChosenFish/se_project_spots/settings/pages#:~:text=https%3A//thechosenfish.github.io/se_project_spots/)
+Spots is a multi-user website designed to make it easy to share pictures and comment or even like said pictures. Each user has a personal profile with a short descriotion of who they are and a place to describe a little about themselves
+
+### Tech Stack
+
+* HTML
+* CSS 
+* FIGMA
+
+*  To build this particular website we used a tool called **figma**.  
+
+*  Figma shows the design of the web pages on a desktop and their responive versions on tablets and phones.    
+
+* To make this sight responsive we used a coding rule called media queries which act as rules for the page to adapt to different screen sizes. We also implied import rules in the **index.css** file to help with the organization of css. 
+
+* We used a lot of '<div>' elements to arrange different sections on the site
+
+* Also newer techniques like grid template columns
+
+'''
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 413px);
+  justify-content: center;
+  gap: 40px 20px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+}
+'''
+
+#### Demo images
+
+* [demo version](../se_project_spots/images/demoimages/Screenshot%202024-07-14%20at%208.55.09%20AM.png).
+* [demo version](../se_project_spots/images/demoimages/Screenshot%202024-07-14%20at%208.55.36%20AM.png).
+* [demo version](../se_project_spots/images/demoimages/Screenshot%202024-07-14%20at%208.56.10%20AM.png).
+
+
+#### Spots Demo Video
+
+[demo-video](https://drive.google.com/file/d/1DrN6P8FihTSNySZwKWd37Q3D4RO6VX0E/view?usp=sharing)
