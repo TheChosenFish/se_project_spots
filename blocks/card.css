@@ -16,8 +16,21 @@
   height: 20px;
   border: none;
   background-color: transparent;
+  transition: 1s;
 
 }
+
+.card__like-button:hover {
+  background-image: url(../images/State=Hover.svg);
+  width: 23px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  /* color: black; */
+  background-color: transparent;
+  transition: 1s;
+}
+
 
 .card__title {
   margin: 0;

@@ -27,7 +27,6 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-
 }
 
 .profile__description {
@@ -42,12 +41,12 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
-
 }
 
 .profile__add-button {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 149px;
   height: 52px;
   margin-left: auto;
@@ -58,6 +57,25 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
+  transition: 1s;
+}
+
+.profile__add-button:hover {
+  display: flex;
+  align-items: center;
+  width: 149px;
+  height: 52px;
+  margin-left: auto;
+  background-color: #000;
+  opacity: 80%;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: auto;
+  color: #fcf5e5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  transition: linear 1s;
 }
 
 .profile__edit-button {
@@ -73,10 +91,39 @@
   font-weight: 500;
   line-height: 16px;
   font-size: 16px;
+  transition: 1s;
+}
+
+.profile__edit-button:hover {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  color: #000;
+  opacity: 100%;
+  background-color: #fcf5e5;
+  border: none;
+  cursor: pointer;
+  margin-right: auto;
+  padding: 0;
+  font-weight: 500;
+  line-height: 16px;
+  font-size: 16px;
+  transition: 1s;
 }
 
 .profile__pencil-icon {
   padding-right: 8px;
+
+}
+
+.profile__pencil-icon:hover {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  padding-right: 8px;
+  margin-right: auto;
+  cursor: pointer;
+  color: #000;
 }
 
 .profile__plus-icon {
@@ -87,14 +134,12 @@
 }
 
 @media screen and (max-width: 627px) {
-
   .profile {
     flex-direction: column;
     max-width: 288px;
     align-items: center;
     text-align: center;
     padding-top: 20px;
-
   }
 
   .profile__name {
@@ -102,8 +147,6 @@
     padding-bottom: 0;
     font-size: 20px;
     max-width: 288px;
-
-
   }
 
   .profile__description {
@@ -121,7 +164,6 @@
     align-items: center;
     text-align: center;
     margin-left: 97.5px;
-
   }
 
   .profile__add-button {
