@@ -113,7 +113,6 @@
 
 .profile__pencil-icon {
   padding-right: 8px;
-
 }
 
 .profile__pencil-icon:hover {
@@ -130,7 +129,6 @@
   max-height: 12px;
   max-width: 12px;
   margin-right: 8px;
-  margin-left: 20px;
 }
 
 @media screen and (max-width: 627px) {

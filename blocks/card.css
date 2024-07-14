@@ -17,7 +17,6 @@
   border: none;
   background-color: transparent;
   transition: 1s;
-
 }
 
 .card__like-button:hover {
@@ -31,7 +30,6 @@
   transition: 1s;
 }
 
-
 .card__title {
   margin: 0;
   max-width: 353px;
@@ -41,23 +39,17 @@
   font-weight: 500;
   line-height: 24px;
   font-size: 20px;
-
 }
 .card__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 12px;
-
 }
 
 @media screen and (max-width: 627px) {
-
   .card__image {
     height: 288px;
     width: 288px;
   }
-
-  }
-
-
+}
