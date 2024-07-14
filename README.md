@@ -41,4 +41,4 @@ Spots is a multi-user website designed to make it easy to share pictures and com
 
 This website has been deployed to github pages
 
-[deployment-link]()
+[deployment-link](https://thechosenfish.github.io/se_project_spots/)
