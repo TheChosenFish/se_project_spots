@@ -20,14 +20,8 @@
 }
 
 .card__like-button:hover {
-  background-image: url(../images/State=Hover.svg);
-  width: 23px;
-  height: 20px;
-  border: none;
   cursor: pointer;
-  /* color: black; */
-  background-color: transparent;
-  transition: 1s;
+  opacity: 100%;
 }
 
 .card__title {
