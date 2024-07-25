@@ -65,7 +65,6 @@
 .profile__add-button:hover {
   opacity: 80%;
   cursor: pointer;
-
 }
 
 .profile__edit-button {
@@ -87,7 +86,6 @@
 .profile__edit-button:hover {
   opacity: 100%;
   cursor: pointer;
-
 }
 
 .profile__pencil-icon {
