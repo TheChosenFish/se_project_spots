@@ -14,7 +14,7 @@
   padding-right: 20px;
 }
 
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 
@@ -137,8 +137,8 @@
   .modal__close-btn {
     top: 12px;
     right: 12px;
-    /* display: flex;
-    justify-content: space-between; */
+    display: flex;
+    justify-content: space-between;
   }
 
   .modal__submit-btn {
