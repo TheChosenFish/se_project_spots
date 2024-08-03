@@ -63,7 +63,6 @@ function getCardElement(data) {
   cardNameEl.textContent = data.name;
 
   image.src = data.src;
-  image.name = data.name;
   image.alt = data.alt;
 
   return cardElement;
