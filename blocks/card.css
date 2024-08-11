@@ -17,18 +17,20 @@ border: none;
 width: 32px;
 height: 32px;
 background-color: transparent;
-position: absolute;
+position:absolute;
 z-index: 0;
 margin-left: 371px;
 margin-bottom: 371px;
 margin-top: 10px;
 margin-right: 10px;
+transition: normal 1s ease all;
 
 }
 
 .card__trash-button:hover {
   background-image: url(../images/hovertrash.svg);
-  transition: ease-in-out 1s;
+  cursor: pointer;
+
 
 }
 
@@ -80,5 +82,20 @@ background-image: url(../images/hoverliked.svg);
   .card__image {
     height: 288px;
     width: 288px;
+    position: relative;
+    margin: 0;
+    z-index: 0;
+
+  }
+
+  .card__trash-button {
+    position: absolute;
+    margin: 0;
+    z-index: 1;
+    right: 10px;
+    top: 10px;
+
+
+
   }
 }
