@@ -160,6 +160,23 @@
   transition: 0.5s linear;
 }
 
+.modal__input_type_error {
+  border: 1px solid rgb(255, 0, 0, 0.7);
+}
+
+.modal__error {
+  display: block;
+  color: #ff0000;
+  opacity: .7;
+  font-size: 16px;
+
+}
+
+.modal__error_hiddn {
+  display: none;
+}
+
+
 .modal__submit-btn {
   width: 156px;
   height: 52px;
@@ -169,6 +186,18 @@
   color: #fff;
   padding-top: 18px;
   padding-bottom: 18px;
+}
+
+.modal__submit-btn_disabled {
+  width: 156px;
+  height: 52px;
+  background-color: #212121;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  opacity: .5;
 }
 
 @media screen and (max-width: 627px) {
