@@ -169,12 +169,13 @@
   color: #ff0000;
   opacity: .7;
   font-size: 16px;
+  /* visibility: hidden; */
 
 }
 
-.modal__error_hiddn {
+/* .modal__error_hidden {
   display: none;
-}
+} */
 
 
 .modal__submit-btn {
@@ -259,24 +260,3 @@
     padding: 0;
   }
 }
-
-/* @media screen and (max-width: 320px) {
-  .modal__container_type_preview {
-    padding: 0px;
-    border: none;
-    border-radius: 8px;
-    position: relative;
-    max-width: 446.43px;
-    width: 100%;
-
-  }
-
-  .modal__image {
-    width: 288px;
-    max-width: 288px;
-    max-height: 80vh;
-    width: fit-content;
-    box-sizing: border-box;
-    border-radius: 10px;
-  }
-} */
