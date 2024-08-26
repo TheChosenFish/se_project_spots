@@ -174,14 +174,17 @@ closeButtons.forEach((button) => {
   });
 });
 
-cardModalClsBtn.addEventListener("click", (evt) => {
+document.addEventListener("click", (evt) => {
   if(evt.target.classList.contains('modal')) {
-    // const openedModal = document.querySelector('.modal_opened');
-    if(openedModal) {
-      closeModal(openedModal);
-    };
+    closeModal(evt.target);
   };
 });
+//     const openedModal = document.querySelector('.modal_opened');
+//     if(openedModal) {
+//       closeModal(openedModal);
+//     };
+//   };
+// });
 
 // cardModalClsBtn.addEventListener("click", () => {
 //   closeModal(newCard);
