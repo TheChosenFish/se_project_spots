@@ -174,9 +174,9 @@ closeButtons.forEach((button) => {
   });
 });
 
-document.addEventListener("click", (evt) => {
+cardModalClsBtn.addEventListener("click", (evt) => {
   if(evt.target.classList.contains('modal')) {
-    const openedModal = document.querySelector('.modal_opened');
+    // const openedModal = document.querySelector('.modal_opened');
     if(openedModal) {
       closeModal(openedModal);
     };
