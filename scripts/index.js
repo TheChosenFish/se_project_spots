@@ -121,9 +121,9 @@ function handleEscKeyPress(evt) {
     const openedModal = document.querySelector(".modal_opened");
     if (openedModal) {
       closeModal(openedModal);
-    };
-  };
-};
+    }
+  }
+}
 
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
@@ -175,10 +175,13 @@ closeButtons.forEach((button) => {
 });
 
 document.addEventListener("click", (evt) => {
-  if(evt.target.classList.contains('modal')) {
+  if (evt.target.classList.contains("modal")) {
     closeModal(evt.target);
-  };
+  } else {
+    document.removeEventListener;
+  }
 });
+
 //     const openedModal = document.querySelector('.modal_opened');
 //     if(openedModal) {
 //       closeModal(openedModal);
