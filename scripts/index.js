@@ -174,11 +174,9 @@ closeButtons.forEach((button) => {
   });
 });
 
-document.addEventListener("click", (evt) => {
+addEventListener("click", (evt) => {
   if (evt.target.classList.contains("modal")) {
     closeModal(evt.target);
-  } else {
-    document.removeEventListener;
   }
 });
 
