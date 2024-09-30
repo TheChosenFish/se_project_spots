@@ -9,15 +9,14 @@
     />
     <meta name="keywords" content="html, css, javascript" />
     <meta name="author" content="Michael Bostick" />
-    <link rel="stylesheet" href="./pages/index.css" />
     <link rel="icon" href="./favicon.ico" />
-    <title>Spots</title>
+    <title>Spotz</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
         <img
-          src="./images/Logo.svg"
+          src="<%= require('./images/Logo.svg')%>"
           alt="spots logo image"
           class="header__logo"
         />
@@ -25,7 +24,7 @@
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./images/avatar.jpg"
+            id="avatar-image"
             alt="Bessie Coleman Avatar"
             class="profile__avatar"
           />
@@ -38,7 +37,7 @@
               class="profile__edit-button"
             >
               <img
-                src="./images/Group 2.svg"
+                src="<%= require('./images/pencil.svg')%>"
                 alt="pencil icon"
                 class="profile__pencil-icon"
               />Edit Profile
@@ -51,7 +50,7 @@
             class="profile__add-button"
           >
             <img
-              src="./images/plus.svg"
+              src="<%= require('./images/plus.svg')%>"
               alt="plus icon"
               class="profile__plus-icon"
             />New Post
@@ -159,7 +158,5 @@
         <p class="modal__caption"></p>
       </div>
     </div>
-    <script defer src="./scripts/index.js"></script>
-    <script defer src="./scripts/validation.js"></script>
   </body>
 </html>
