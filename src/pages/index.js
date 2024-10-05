@@ -130,20 +130,25 @@ function getCardElement(data) {
   const image = cardElement.querySelector(".card__image");
   const cardLikedBtn = cardElement.querySelector(".card__like-button");
   const cardDeleteBtn = cardElement.querySelector(".card__trash-button");
-  api.likeCard(data._id)
-    .then(() => {
 
-    })
-    .catch(console.error);
   cardLikedBtn.addEventListener("click", () => {
-    const liketoggle = cardLikedBtn.classList.contains("card__like-button_liked") ? 'unlikeCard' : 'likeCard';
-    api.nonlikedCard(data._id)
+    if
+    (cardLikedBtn.classList.contains("card__like-button_liked"))
+    { api.nonlikedCard(data._id)
     .then(() => {
-      cardLikedBtn.classList.toggle("card__like-button_liked");
-
+      cardLikedBtn.classList.remove("card__like-button_liked")
     })
-    .catch(console.error);
+    .catch(console.error);}
+    else
+    {api.likeCard(data._id)
+      .then(() => {
+        cardLikedBtn.classList.add("card__like-button_liked")
+      })
+      .catch(console.error);
+    }
   });
+
+
 
   cardDeleteBtn.addEventListener("click", () =>
     handleCardDelete(cardElement, data)
@@ -160,6 +165,9 @@ function getCardElement(data) {
   image.src = data.link;
   image.alt = data.alt;
 
+  if(data.isLiked){
+    cardLikedBtn.classList.add("card__like-button_liked");
+  }
   return cardElement;
 }
 
