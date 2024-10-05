@@ -62,13 +62,12 @@ class Api {
         Promise.reject(`Error: ${res.status}`);
       });
     }
-    deleteCard({}) {
-      return fetch(`${this._baseUrl}/cards/${"cardID"}`, {
+    deleteCard({selectedCardId}) {
+      return fetch(`${this._baseUrl}/cards/cardId`, {
         method: "DELETE",
         headers: this._headers,
-        // Send the data in the body as a JSON string.
         body: JSON.stringify({
-
+          selectedCardId
         }),
       }).then((res) => {
         if (res.ok) {

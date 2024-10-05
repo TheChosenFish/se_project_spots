@@ -56,6 +56,7 @@ const api = new Api({
     avatar:
       "https://practicum-content.s3.amazonaws.com/resources/default-avatar_1704458546.png",
     name: "Placeholder name",
+    id:"",
     "Content-Type": "application/json",
   },
 });
@@ -115,6 +116,12 @@ const deleteModalCanclBtn = cardDeleteModal.querySelector(".modal__cancel-btn");
 let selectedCard;
 let selectedCardId;
 
+function handleCardDelete(cardElement, data) {
+  selectedCard = cardElement;
+  selectedCardId = data._id;
+  openModal(cardDeleteModal);
+}
+
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -132,29 +139,6 @@ function getCardElement(data) {
     handleCardDelete(cardElement, data)
   );
 
-  function handleCardDelete(data) {
-    selectedCard = cardElement;
-    selectedCardId = data;
-    openModal(cardDeleteModal);
-  }
-
-  function handleDeleteSubmit() {
-    api
-      .deleteCard(selectedCardId)
-      .then(() => {
-        selectedCard.remove();
-        // remove the card from the DOM
-        closeModal(cardDeleteModal);
-        // close the modal
-      })
-      .catch(console.error);
-  }
-
-  deleteModalDelBtn.addEventListener("click", handleDeleteSubmit);
-  // deleteModalCanclBtn.addEventListener("click", () => {
-  //   cardDeleteModal.remove()
-  // });
-
   image.addEventListener("click", () => {
     openModal(previewModal);
     preModalCaptionEl.textContent = data.name;
@@ -168,6 +152,23 @@ function getCardElement(data) {
 
   return cardElement;
 }
+
+function handleDeleteSubmit() {
+  api
+    .deleteCard({selectedCardId})
+    .then(() => {
+      selectedCard.remove();
+
+      // remove the card from the DOM
+      closeModal(cardDeleteModal);
+      // close the modal
+    })
+    .catch(console.error);
+}
+deleteModalDelBtn.addEventListener("click", handleDeleteSubmit);
+  // deleteModalCanclBtn.addEventListener("click", () => {
+  //   cardDeleteModal.remove()
+  // });
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
