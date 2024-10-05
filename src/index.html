@@ -105,7 +105,10 @@
                 maxlength="200"
                 required
               />
-              <span id="profile-description-input-error" class="modal__error"></span>
+              <span
+                id="profile-description-input-error"
+                class="modal__error"
+              ></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
@@ -141,10 +144,25 @@
                 maxlength="30"
                 required
               />
-              <span id="add-card-caption-input-error" class="modal__error"></span>
+              <span
+                id="add-card-caption-input-error"
+                class="modal__error"
+              ></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
+        </div>
+      </div>
+      <div class="modal" id="delete-card-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn modal__close-btn_type_preview"></button>
+          <h2 class="modal__title">
+            Are you sure you want to delete this image?
+          </h2>
+          <!-- <form type="submit" id="delete-card-form" class="modal__form" novalidate> -->
+            <button type="button" class="modal__delete-btn">Delete</button>
+            <button type="button" class="modal__cancel-btn">Cancel</button>
+          <!-- </form> -->
         </div>
       </div>
     </div>

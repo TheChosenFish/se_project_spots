@@ -177,6 +177,29 @@
   display: none;
 } */
 
+.modal__delete-btn {
+  width: 156px;
+  height: 52px;
+  background: #FF6565;
+  border-radius: 8px;
+  border: none;
+  color: #000000;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.modal__cancel-btn {
+  width: 156px;
+  height: 52px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: #000000;
+  color: #000000;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
 
 .modal__submit-btn {
   width: 156px;
