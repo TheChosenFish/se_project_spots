@@ -62,12 +62,12 @@ class Api {
         Promise.reject(`Error: ${res.status}`);
       });
     }
-    deleteCard({selectedCardId}) {
-      return fetch(`${this._baseUrl}/cards/cardId`, {
+    deleteCard(cardId) {
+      return fetch(`${this._baseUrl}/cards/${cardId}`, {
         method: "DELETE",
         headers: this._headers,
         body: JSON.stringify({
-          selectedCardId
+          cardId
         }),
       }).then((res) => {
         if (res.ok) {
@@ -76,7 +76,34 @@ class Api {
         Promise.reject(`Error: ${res.status}`);
       });
     }
+    likeCard(cardId) {
+      return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
+        method: "PUT",
+        headers: this._headers,
+      }).then((res) => {
+        if (res.ok) {
+          return res.json()
+        } else {
+        Promise.reject(`Error: ${res.status}`);
+        }
+      });
+    }
+    nonlikedCard(cardId) {
+      return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
+        method: "DELETE",
+        headers: this._headers,
+        body: JSON.stringify({
+          cardId
+        }),
+      }).then((res) => { console.log(`Status: ${res.status}`);
+        if (res.ok) {
+          return res.json()
+        }
+        Promise.reject(`Error: ${res.status}`);
+      });
+    }
   }
+
 
 
 export default Api

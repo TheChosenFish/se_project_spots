@@ -130,9 +130,19 @@ function getCardElement(data) {
   const image = cardElement.querySelector(".card__image");
   const cardLikedBtn = cardElement.querySelector(".card__like-button");
   const cardDeleteBtn = cardElement.querySelector(".card__trash-button");
+  api.likeCard(data._id)
+    .then(() => {
 
+    })
+    .catch(console.error);
   cardLikedBtn.addEventListener("click", () => {
-    cardLikedBtn.classList.toggle("card__like-button_liked");
+    const liketoggle = cardLikedBtn.classList.contains("card__like-button_liked") ? 'unlikeCard' : 'likeCard';
+    api.nonlikedCard(data._id)
+    .then(() => {
+      cardLikedBtn.classList.toggle("card__like-button_liked");
+
+    })
+    .catch(console.error);
   });
 
   cardDeleteBtn.addEventListener("click", () =>
@@ -155,7 +165,7 @@ function getCardElement(data) {
 
 function handleDeleteSubmit() {
   api
-    .deleteCard({selectedCardId})
+    .deleteCard(selectedCardId)
     .then(() => {
       selectedCard.remove();
 
