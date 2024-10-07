@@ -177,6 +177,21 @@
   display: none;
 } */
 
+.modal__title-delete {
+  margin: 0;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.modal__button-container{
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 .modal__delete-btn {
   width: 156px;
   height: 52px;
@@ -186,6 +201,8 @@
   color: #000000;
   padding-top: 18px;
   padding-bottom: 18px;
+
+
 }
 
 .modal__cancel-btn {
@@ -198,6 +215,7 @@
   color: #000000;
   padding-top: 18px;
   padding-bottom: 18px;
+
 }
 
 
