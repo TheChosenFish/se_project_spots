@@ -42,6 +42,7 @@
   border-radius: 10px;
   box-sizing: border-box;
   opacity: 1;
+  font-family: "Poppins", "helvetica", "sans-serif";
 
   transition: opacity 0.5s linear;
 }
@@ -205,6 +206,20 @@
 
 }
 
+.modal__delete-btn:hover {
+  width: 156px;
+  height: 52px;
+  background: #FF3333;
+  border-radius: 8px;
+  border: none;
+  color: #000000;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  cursor: pointer
+
+
+}
+
 .modal__cancel-btn {
   width: 156px;
   height: 52px;
@@ -217,6 +232,21 @@
   padding-bottom: 18px;
 
 }
+
+.modal__cancel-btn:hover {
+  width: 156px;
+  height: 52px;
+  background-color: #212121;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: #000000;
+  color: #fff;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  cursor: pointer;
+
+}
+
 
 
 .modal__submit-btn {

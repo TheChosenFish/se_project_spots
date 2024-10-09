@@ -1,4 +1,5 @@
 import "../pages/index.css";
+import { setSubmitButtonText } from "../Utils/Helpers.js";
 import {
   enableValidation,
   settings,
@@ -123,8 +124,6 @@ const deleteModalCanclBtn = cardDeleteModal.querySelector(".modal__cancel-btn");
 let selectedCard;
 let selectedCardId;
 
-
-
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -159,8 +158,8 @@ function getCardElement(data) {
   image.addEventListener("click", () => {
     openModal(previewModal);
     preModalCaptionEl.textContent = data.name;
-    preModalImage.src = data.src;
-    preModalImage.alt = data.alt;
+    preModalImage.src = data.link;
+    preModalImage.alt = data.name;
   });
 
   cardNameEl.textContent = data.name;
@@ -174,15 +173,20 @@ function getCardElement(data) {
 }
 
 function handleDeleteSubmit() {
+  // evt.preventDefault()
+  setSubmitButtonText(deleteModalDelBtn, "Deleting");
+
   api
     .deleteCard(selectedCardId)
     .then(() => {
       selectedCard.remove();
       closeModal(cardDeleteModal);
       newCardForm.reset();
-
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      setSubmitButtonText(deleteModalDelBtn, "Delete");
+    });
 }
 function handleCardDelete(cardElement, data) {
   selectedCard = cardElement;
@@ -217,21 +221,33 @@ function handleEscKeyPress(evt) {
 
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
+  const cardModalSubmitBtn = evt.submitter;
+  cardModalSubmitBtn.textContent = "Saving...";
+
+
+
   api
     .editUserInfo({
       name: editModalProfileName.value,
       about: editModalProfileDescription.value,
     })
     .then((data) => {
+      debugger;
       profileDescriptionElement.textContent = data.about;
       profileNameElement.textContent = data.name;
       closeModal(editProfileModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      cardModalSubmitBtn.textContent = "Save";
+    });
 }
 
 function handleNewCardSubmit(evt) {
   evt.preventDefault();
+  const cardModalSubmitBtn = evt.submitter;
+  cardModalSubmitBtn.textContent = "Saving...";
+
   api
     .addNewCard({
       name: newCardCaptionInput.value,
@@ -244,20 +260,28 @@ function handleNewCardSubmit(evt) {
       closeModal(newCardModal);
       newCardForm.reset();
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      cardModalSubmitBtn.textContent = "Save";
+    });
 }
 
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
+  const cardModalSubmitBtn = evt.submitter;
+  cardModalSubmitBtn.textContent = "Saving...";
   api
     .editAvatar({
-     avatar:avatarInput.value
-})
+      avatar: avatarInput.value,
+    })
     .then((data) => {
       profileImage.src = avatarInput.value;
       closeModal(avatarModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      cardModalSubmitBtn.textContent = "Save";
+    });
 }
 
 profileEditButton.addEventListener("click", () => {
