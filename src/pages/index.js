@@ -166,7 +166,7 @@ function getCardElement(data) {
   image.src = data.link;
   image.alt = data.alt;
 
-  if (data._isLiked) {
+  if (data.isLiked) {
     cardLikedBtn.classList.add("card__like-button_liked");
   }
   return cardElement;
