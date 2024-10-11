@@ -232,7 +232,6 @@ function handleEditFormSubmit(evt) {
       about: editModalProfileDescription.value,
     })
     .then((data) => {
-      debugger;
       profileDescriptionElement.textContent = data.about;
       profileNameElement.textContent = data.name;
       closeModal(editProfileModal);
@@ -268,8 +267,8 @@ function handleNewCardSubmit(evt) {
 
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
-  const cardModalSubmitBtn = evt.submitter;
-  cardModalSubmitBtn.textContent = "Saving...";
+  const avatarSubmitBtn = evt.submitter;
+  avatarSubmitBtn.textContent = "Saving...";
   api
     .editAvatar({
       avatar: avatarInput.value,
