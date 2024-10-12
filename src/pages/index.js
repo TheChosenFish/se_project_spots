@@ -11,43 +11,6 @@ import avatarSrc from "../images/avatar.jpg";
 
 const profileImage = document.getElementById("avatar-image");
 
-// const initialCards = [
-//   {
-//     name: "Val Thorens",
-//     src: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
-//     alt: "Val Thorens",
-//   },
-//   {
-//     name: "Restaurant terrace",
-//     src: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
-//     alt: "Restaurant terrace",
-//   },
-
-//   {
-//     name: "An outdoor cafe",
-//     src: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg",
-//     alt: "An outdoor cafe",
-//   },
-
-//   {
-//     name: "A very long bridge, over the forest and through the trees",
-//     src: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg",
-//     alt: "A very long bridge, over the forest and through the trees",
-//   },
-
-//   {
-//     name: "Tunnel with morning light",
-//     src: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg",
-//     alt: "Tunnel with morning light",
-//   },
-
-//   {
-//     name: "Mountain house",
-//     src: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
-//     alt: "Mountain house",
-//   },
-// ];
-
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
   headers: {
@@ -60,8 +23,6 @@ const api = new Api({
     "Content-Type": "application/json",
   },
 });
-
-// destructure second item in callback of .then()
 
 api
   .getAppInfo()
@@ -174,7 +135,6 @@ function getCardElement(data) {
 }
 
 function handleDeleteSubmit() {
-  // evt.preventDefault()
   setSubmitButtonText(deleteModalDelBtn, "Deleting");
 
   api
@@ -280,7 +240,7 @@ function handleAvatarSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      avatarSubmitBtn.textContent = "Save";
+      profileSubmitBtn.textContent = "Save";
     });
 }
 
@@ -294,9 +254,6 @@ profileEditButton.addEventListener("click", () => {
   );
   openModal(editProfileModal);
 });
-// modalCloseBtn.addEventListener("click", () => {
-//   closeModal(editProfileModal);
-// });
 
 profileAddButton.addEventListener("click", () => {
   openModal(newCardModal);
@@ -323,9 +280,5 @@ avatarForm.addEventListener("submit", handleAvatarSubmit);
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 newCardForm.addEventListener("submit", handleNewCardSubmit);
 
-// for (let i = 0; i < initialCards.length; i++) {
-//   const cardElement = getCardElement(initialCards[i]);
-//   cardsList.prepend(cardElement);
-// }
 
 enableValidation(settings);
