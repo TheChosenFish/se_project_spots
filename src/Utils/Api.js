@@ -79,6 +79,6 @@ class Api {
       body: JSON.stringify({avatar}),
     }).then(this._checkResponse);
   }
-} //{avatar: avatar}
+} 
 
 export default Api;

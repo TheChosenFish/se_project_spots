@@ -98,6 +98,7 @@ const avatarSubmitBtn = avatarModal.querySelector(".modal__submit-btn");
 // Form Elements
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editFormElement = editProfileModal.querySelector(".modal__form");
+const profileSubmitBtn = editProfileModal.querySelector(".modal__submit-btn")
 
 const editModalProfileName = editProfileModal.querySelector(
   "#profile-name-input"
@@ -221,8 +222,8 @@ function handleEscKeyPress(evt) {
 
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
-  const cardModalSubmitBtn = evt.submitter;
-  cardModalSubmitBtn.textContent = "Saving...";
+  const profileSubmitBtn = evt.submitter;
+  profileSubmitBtn.textContent = "Saving...";
 
 
 
@@ -279,7 +280,7 @@ function handleAvatarSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      cardModalSubmitBtn.textContent = "Save";
+      avatarSubmitBtn.textContent = "Save";
     });
 }
 
