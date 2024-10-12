@@ -199,7 +199,7 @@ function handleEditFormSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      cardModalSubmitBtn.textContent = "Save";
+      profileSubmitBtn.textContent = "Save";
     });
 }
 
@@ -240,7 +240,7 @@ function handleAvatarSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      profileSubmitBtn.textContent = "Save";
+      avatarSubmitBtn.textContent = "Save";
     });
 }
 
